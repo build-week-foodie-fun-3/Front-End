@@ -1,10 +1,4 @@
 import React, { useState } from "react";
-import {
-    withFormik,
-    Form,
-    Field
-  } from "formik";
-  import * as Yup from "yup";
 
 const Restaurant = props => {
 
@@ -15,7 +9,6 @@ const Restaurant = props => {
 	hours: "",
 	rating: "",
 	// photourl: "https://sc01.alicdn.com/kf/HTB1E1F.KpXXXXamXVXXq6xXFXXXF/Crinkle-Cut-Fries.jpg"
-
   });
 
   const handleChanges = e => {
@@ -28,20 +21,18 @@ const Restaurant = props => {
   const submitForm = e => {
     e.preventDefault();
     props.addNewForm(form);
-    setForm({ name: "",
-    typeofcusine: "",
-    location: "",
-	hours: "",
-	rating: "", });
+    setForm({ name: "", typeofcusine: "", location: "", hours: "", rating: "", });
   };
 
   return (
-    <form onSubmit={submitForm}>
+<div className="create">
+    <div className="create-box">
+    <form  onSubmit={submitForm}>
       <label htmlFor="name">Name</label>
       <input
         id="name"
         type="text"
-        placeholder="name"
+        placeholder="Name"
         onChange={handleChanges}
         name="name"
         value={form.name}
@@ -55,6 +46,7 @@ const Restaurant = props => {
         name="typeofcusine"
         value={form.typeofcusine}
       />
+      <label htmlFor="location">Location</label>
       <input
         id="location"
         type="text"
@@ -63,6 +55,7 @@ const Restaurant = props => {
         name="location"
         value={form.location}
       />
+      <label htmlFor="hours">Hours</label>
       <input
         id="hours"
         type="text"
@@ -71,6 +64,7 @@ const Restaurant = props => {
         name="hours"
         value={form.hours}
       />
+      <label htmlFor="rating">Rating</label>
       <input
         id="rating"
         type="text"
@@ -81,6 +75,8 @@ const Restaurant = props => {
       />
       <button type="submit">Add Card </button>
     </form>
+    </div>
+    </div>
   );
 };
 

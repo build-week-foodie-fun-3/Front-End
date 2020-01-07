@@ -2,7 +2,7 @@ import React from "react";
 
 const Cards = props => {
     return (
-      <div className="card-list">
+      <div className="cards">
         {props.forms.map(form => (
           <div className="form" key={form.id}>
             <h2>{form.name}</h2>
