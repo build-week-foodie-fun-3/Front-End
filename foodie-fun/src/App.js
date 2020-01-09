@@ -2,40 +2,33 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import {BrowserRouter as Router, Route, NavLink, Switch} from "react-router-dom";
 import Restaurant from "./Components/Restaurant";
-import Cards from "./Components/Cards";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-// import Account from "./Components/Account";
+import Food from "./Components/Food";
+import Search from "./Components/Search";
 import "./App.css";
 
 function App() {
-const [forms, setForms] = useState([]);
-  const addNewForm = form => {
-    const newForm = {
-      id: Date.now(),
-      name: form.name, 
-      typeofcusine: form.typeofcusine,
-      location: form.location,
-      hours: form.hours,
-      rating: form.rating
-    };
-    setForms([...forms, newForm]);
-  };
 
   return (
     <div className="App">
-      <Restaurant addNewForm={addNewForm} />
-      <Cards forms={forms} />
         <Router>
-      <nav>
-      
+      <nav className="nav">
        <NavLink to={`/Login`}>
           Login
         </NavLink>
         <NavLink to={`/Signup`}>
           Signup
         </NavLink>
-        
+        <NavLink to={`/Restaurant`}>
+          Add Restaurant
+        </NavLink>
+        <NavLink to={`/Food`}>
+          Add Review
+        </NavLink>
+        <NavLink to={`/Search`}>
+          Search
+        </NavLink>
       </nav>
       <Switch>
         <Route path={`/Login`}>
@@ -43,6 +36,15 @@ const [forms, setForms] = useState([]);
         </Route>
         <Route path={`/Signup`}>
           <Signup />
+        </Route>
+        <Route path={`/Restaurant`}>
+          <Restaurant />
+        </Route>
+        <Route path={`/Food`}>
+          <Food />
+        </Route>
+        <Route path={`/Search`}>
+          <Search />
         </Route>
       </Switch>
       </Router>

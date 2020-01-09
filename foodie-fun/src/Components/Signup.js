@@ -55,27 +55,7 @@ import axios from "axios";
               </p>
             )}
           </label>
-          <Field
-            as="select"
-            className="location-select"
-            name="location"
-          >
-            <option disabled>
-              Choose an Option
-            </option>
-            <option value="west">
-              West
-            </option>
-            <option value="east">
-              East
-            </option>
-            <option value="south">
-              South
-            </option>
-            <option value="north">
-              North
-            </option>
-          </Field>
+          
           <label htmlFor="email">
             Email Address
             <Field
