@@ -5,11 +5,11 @@ const Cards = props => {
       <div className="cards">
         {props.forms.map(form => (
           <div className="form" key={form.id}>
-            <h2>{form.name}</h2>
-            <h3>{form.typeofcusine}</h3>
-            <p>{form.location}</p>
-            <p>{form.hours}</p>
-            <p>{form.rating}</p>
+            <p>Restaurant Name: {form.name}</p>
+            <p>Type of Cusine: {form.typeofcusine}</p>
+            <p>Location: {form.location}</p>
+            <p>Hours of Operation: {form.hours}</p>
+            <p>Rating: {form.rating}</p>
           </div>
         ))}
       </div>

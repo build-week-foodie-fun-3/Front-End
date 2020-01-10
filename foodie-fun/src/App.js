@@ -23,20 +23,20 @@ const [forms, setForms] = useState([]);
   };
 
   return (
+  
     <div className="App">
-      <Restaurant addNewForm={addNewForm} />
-      <Cards forms={forms} />
         <Router>
-      <nav>
-      
+      <nav className="nav">
+      <h1 className="header">FoodieFun </h1>
        <NavLink to={`/Login`}>
-          Login
+          <button className="buttons">Login</button>
         </NavLink>
         <NavLink to={`/Signup`}>
-          Signup
+          <button className="buttons">Signup</button>
         </NavLink>
-        
       </nav>
+      <Restaurant addNewForm={addNewForm} />
+      <Cards forms={forms} />
       <Switch>
         <Route path={`/Login`}>
           <Login  />

@@ -74,7 +74,7 @@ const Restaurant = props => {
         name="rating"
         value={form.rating}
       />
-      <button type="submit">Add Card </button>
+      <button className="buttons" type="submit">Add Card </button>
     </form>
     </div>
     </div>

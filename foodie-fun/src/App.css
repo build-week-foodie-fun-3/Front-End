@@ -40,16 +40,66 @@
   }
 }
 .create{
-  width:80%;
-  height:20rem;
-  background-color: lightgray;
+  width:90%;
+  height:40rem;
+  background-color:white;
+  border:2rem solid #E6AC00 ;
 }
 .create-box{
-  padding:3%;
+  width: 100%;
+  font-size: 5rem;
 }
 .form{
-  width:50rem;
-  height:75rem;
-  background-color: coral;
+  width:80rem;
+  height:50rem;
+  background-color: #E6AC00;
   margin:2%;
+  font-size: 4rem;
+  padding: 2%;
+  border: 8px solid black;
+  text-align: left;
+}
+
+.nav{
+  display: flex;
+  width: 90%;
+  height:10vh;
+  background-color:#E6AC00;
+  font-size: 20px;
+  padding: 2%;
+  justify-content: space-evenly;
+}
+
+.header{
+  font-size: 10rem;
+}
+.buttons{
+  font-size: 10rem;
+  border-radius: 5rem;
+  width:50rem;
+  border: 3px solid Black;
+  margin-left: 1%;
+  margin-top: 1%;
+} 
+label{
+  padding:1%;
+  
+}
+
+.login-form{
+  width:90%;
+  height:40rem;
+  background-color:white;
+  border:2rem solid #E6AC00 ;
+  font-size: 5rem;
+  margin-top: 2%;
+}
+
+.signup-form{
+  width:90%;
+  height:40rem;
+  background-color:white;
+  border:2rem solid #E6AC00 ;
+  font-size: 5rem;
+  margin-top: 2%;
 }

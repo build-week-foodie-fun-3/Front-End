@@ -90,7 +90,7 @@ import axios from "axios";
               </p>
             )}
           </label>
-          <button type="submit">
+          <button className="buttons" type="submit">
             Submit!
           </button>
         </Form>
